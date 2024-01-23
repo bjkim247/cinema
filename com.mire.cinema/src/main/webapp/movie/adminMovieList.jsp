@@ -12,78 +12,86 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <style>
-.tab p {
-	font-size: 30px;
-	color: black;
-}
+    .movie-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.tabnav {
-	list-style: none;
-	padding: 0;
-	display: flex;
-	margin-top: 10px;
-}
+    .movie-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 20px;
+        width: calc(30% - 40px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
 
-.tabnav li {
-	margin-right: 20px;
-}
+    .movie-card:hover {
+        transform: scale(1.05);
+    }
 
-.movie-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
+    .movie-card img {
+        max-width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 
-.movie-card {
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	margin: 10px;
-	width: calc(25% - 20px); /* 변경된 부분 */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: left;
-}
+    .movie-card h4 {
+        margin: 10px;
+        font-size: 20px;
+        color: #333;
+    }
 
-.movie-card img {
-	max-width: 100%;
-	width:100%;
-	height: 400px;
-	border-radius: 8px;
-	margin-bottom: 10px;
-}
+    .movie-card .details {
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 
-#movieContainer>a {
-	display: block;
-	width: 28%;
-	height: 300px;
-	margin-bottom: 20px;
-}
+    .movie-card .details p {
+        margin: 0;
+        font-size: 16px;
+        color: #555;
+    }
 
-a {
-	text-decoration: none;
-}
+    .movie-card button {
+        margin-top: 10px;
+        font-size: 16px;
+    }
 
-#prev>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
+    #paging {
+        margin-top: 20px;
+    }
 
-#pageNum>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
+    #prev>button,
+    #next>button,
+    #pageNum>button {
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease-in-out;
+        margin: 0 5px;
+    }
 
-#pageNum>button:active {
-	color: red;
-}
+    #prev>button:hover,
+    #next>button:hover,
+    #pageNum>button:hover {
+        background-color: #ddd;
+    }
 
-#next>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
+    #pageNum>button:active {
+        color: red;
+    }
 </style>
+
 </head>
 
 <body>

@@ -88,7 +88,7 @@
                 + "<tr><th scope='col'>영화관 이름</th><td>"
                 + cinema.cinemaName
                 + "</td></tr>"
-                + "<tr><th scope='col'>영화관 소개</th><td style='height: 200px;'>"
+                + "<tr><th scope='col'>영화관 소개</th><td style='height: 200px;'><img src='../upload/5002009-09-14-001.jpg'>"
                 + cinema.cinemaIntro
                 + "</td></tr>"
                 + "<tr><th scope='col'>총 상영관 수</th><td>"

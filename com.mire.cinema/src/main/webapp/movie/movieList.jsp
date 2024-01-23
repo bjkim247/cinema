@@ -12,78 +12,85 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <style>
-.tab p {
-	font-size: 30px;
-	color: black;
-}
+        /* Add some spacing and styling to the movie cards */
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
-.tabnav {
-	list-style: none;
-	padding: 0;
-	display: flex;
-	margin-top: 10px;
-}
+        .movie-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            background-color: #fff;
+            overflow: hidden;
+        }
 
-.tabnav li {
-	margin-right: 20px;
-}
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
 
-.movie-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
+        .movie-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
 
-.movie-card {
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	margin: 10px;
-	width: calc(25% - 20px); /* 변경된 부분 */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: left;
-}
+        .movie-card .movie-info {
+            padding: 10px;
+        }
 
-.movie-card img {
-	max-width: 100%;
-	width:100%;
-	height: 400px;
-	border-radius: 8px;
-	margin-bottom: 10px;
-}
+        .movie-card h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
 
-#movieContainer>a {
-	display: block;
-	width: 28%;
-	height: 300px;
-	margin-bottom: 20px;
-}
+        .movie-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
 
-a {
-	text-decoration: none;
-}
+        .movie-card button {
+            margin-top: 10px;
+        }
 
-#prev>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
+        /* Style pagination buttons */
+        #paging {
+            margin-top: 20px;
+        }
 
-#pageNum>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
+        #prev>button,
+        #next>button,
+        #pageNum>button {
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out;
+        }
 
-#pageNum>button:active {
-	color: red;
-}
+        #prev>button:hover,
+        #next>button:hover,
+        #pageNum>button:hover {
+            background-color: #ddd;
+        }
 
-#next>button {
-	border: none;
-	font-size: 30px;
-	background-color: white;
-}
-</style>
+        #pageNum>button:active {
+            color: red;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -193,7 +200,7 @@ a {
         	location.href = '/movie/movieInfo.jsp';
         };
         
-       
+                                                                                                                                                         
     </script>
 
 

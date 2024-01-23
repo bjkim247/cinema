@@ -83,7 +83,7 @@ function writeAsk() {
         error: function (error) {
             console.error(error); // 오류 로그 확인
             var errorMessage = error.responseText;
-            alert(errorMessage);
+            alert("로그인이 필요한 서비스입니다.");
         }
     });
 }
