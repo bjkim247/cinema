@@ -20,7 +20,6 @@ import lombok.RequiredArgsConstructor;
 @Transactional
 public class AskServiceImpl implements AskService {
 	private final AskMapper askMapper;
-	private final MemberService memberService;
 
 	// 문의사항 등록
 	@Override

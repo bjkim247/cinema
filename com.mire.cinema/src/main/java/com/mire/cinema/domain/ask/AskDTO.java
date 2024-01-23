@@ -43,6 +43,7 @@ public class AskDTO {
 		private String askTitle;
 		@NotBlank(message = "문의사항을 입력하세요")
 		private String askContent;
+		private String imageUuid;
 	}
 
 	@Data

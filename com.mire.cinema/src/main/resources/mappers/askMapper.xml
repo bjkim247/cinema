@@ -4,8 +4,8 @@
 
     <!-- 문의 게시판 데이터 삽입 -->
     <insert id="insertAsk" parameterType="com.mire.cinema.domain.ask.Ask">
-    INSERT INTO ask (ask_no, ask_title, ask_content, member_id)
-    VALUES (ask_sequence.NEXTVAL, #{askTitle}, #{askContent}, #{memberId})
+    INSERT INTO ask (ask_no, ask_title, ask_content, member_id,image_uuid)
+    VALUES (ask_sequence.NEXTVAL, #{askTitle}, #{askContent}, #{memberId},#{imageUuid})
 </insert>
     <!-- 문의 게시판 목록 조회 -->
     <select id="selectAsk" resultType="Ask">
